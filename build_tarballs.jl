@@ -7,8 +7,8 @@ version = v"2.4.6"
 
 # Collection of sources required to build Libtool
 sources = [
-    "ftp://ftp.gnu.org/gnu/libtool/libtool-2.4.6.tar.xz" =>
-    "7c87a8c2c8c0fc9cd5019e402bed4292462d00a718a7cd5f11218153bf28b26f",
+    "http://ftpmirror.gnu.org/libtool/libtool-2.4.6.tar.gz" =>
+    "e3bd4d5d3d025a36c21dd6af7ea818a2afcd4dfc1ea5a17b39d7854bcd0c06e3",
 
 ]
 
