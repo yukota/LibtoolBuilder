@@ -3,20 +3,19 @@
 using BinaryBuilder
 
 name = "Libtool"
-version = v"2.4.2"
+version = v"2.4.6"
 
 # Collection of sources required to build Libtool
 sources = [
-    "git://git.savannah.gnu.org/libtool.git" =>
-    "91c99165d9cbdd14569f046eb586c67020dd1045",
+    "ftp://ftp.gnu.org/gnu/libtool/libtool-2.4.6.tar.xz" =>
+    "7c87a8c2c8c0fc9cd5019e402bed4292462d00a718a7cd5f11218153bf28b26f",
 
 ]
 
 # Bash recipe for building across all platforms
 script = raw"""
 cd $WORKSPACE/srcdir
-cd libtool/
-./bootstrap 
+cd libtool-2.4.6/
 ./configure --prefix=$prefix --host=$target
 make
 make install
@@ -37,8 +36,7 @@ products(prefix) = [
 
 # Dependencies that must be installed before this package can be built
 dependencies = [
-    "https://github.com/yukota/TexinfoBuilder/releases/download/6.5-0/build_texinfo.v6.5.0.jl",
-    "https://github.com/yukota/help2manBuilder/releases/download/v1.47.8-0/build_help2man.v1.47.8.jl"
+    
 ]
 
 # Build the tarballs, and possibly a `build.jl` as well.
